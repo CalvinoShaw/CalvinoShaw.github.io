@@ -1,5 +1,8 @@
+.DS_Store
+Thumbs.db
 .git/
 .deploy_git/
 node_modules/
-pulic/
+public/
 db.json
+*.log

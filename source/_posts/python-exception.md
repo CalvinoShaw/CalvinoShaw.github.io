@@ -12,9 +12,6 @@ tags: python
 - [TypeError: can't multiply sequence by non-int of type 'str'](http://stackoverflow.com/questions/1204744/typeerror-cant-multiply-sequence-by-non-int-of-type-str)
 - [TypeError: unorderable types: str() >= int()](http://stackoverflow.com/questions/18262398/pythone-3-3-2-age-24-typeerror-unorderable-types-str-int)
 - [SyntaxError: can't assign to function call](http://stackoverflow.com/questions/27669516/syntaxerror-cant-assign-to-function-call-in-python)
-
-ValueError: invalid literal for int() with base 10: 'a'
-
-无法初始化设备 PRN
-
-SyntaxError: EOF while scanning triple-quoted string literal
+- ValueError: invalid literal for int() with base 10: 'a'
+- 无法初始化设备 PRN
+- SyntaxError: EOF while scanning triple-quoted string literal

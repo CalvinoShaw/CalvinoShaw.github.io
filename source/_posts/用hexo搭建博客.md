@@ -30,19 +30,15 @@ tags: hexo
 
 
 ## 关于 hexo 的主题
-作为一个具有极高自由度的框架，hexo 拥有非常多的主题框架贡献者，也有非常多的主题。这次重建（之前已经建过，半荒废状态），用的是 nexT 的 Muse。实话说，如果不是逛 github 看到了这个主题，我都没有动力重建，这个主题太漂亮了。
+作为一个具有极高自由度的框架，hexo 拥有非常多的主题框架贡献者，也有非常多的主题。这次重建（之前已经建过，半荒废状态），用的是 nexT 的 Muse。实话说，如果不是逛 github 看到了这个主题，我都没有动力重建，这个主题太漂亮了。其 slogan 也是：精于心，简于形。
 
 曾经使用过的主题也比较多，用点心雕琢，也可以非常漂亮，在这里提供几个主题参考：
 
-### theme: landscape
-hexo 的原生自带主题
-
-### theme: Tinnypp
-### theme: oishi
-### theme: hexo-theme-sidebar
-### theme: TKL
-### theme: landscape
-
+- landscape。hexo 的原生自带主题。
+- Tinnypp
+- oishi
+- hexo-theme-sidebar
+- TKL
 
 
 ## 基本步骤
@@ -62,6 +58,10 @@ hexo 的原生自带主题
 - `git commit -m "[comment-of-your-commit]"`
 - `git push [remote] [local]`
 
+## 遇到的问题
 
-### 关于 hexo 文件夹内容无法 push 到 github 上的解决方案
-### 关于主题文件夹无法 push 的解决方案
+解决方案见博客。
+
+- 关于 hexo 文件夹内容无法 push 到 github 上的解决方案
+- 关于-hexo-的主题文件夹因为-modified-content-而无法-push-的解决方案
+- 如何处理-hexo-部署过程中遇到的-Deployer-not-found-git

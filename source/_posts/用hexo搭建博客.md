@@ -34,14 +34,12 @@ tags: hexo
 
 曾经使用过的主题也比较多，用点心雕琢，也可以非常漂亮，在这里提供几个主题参考：
 
-### theme: landscape
-hexo 的原生自带主题
-
-### theme: Tinnypp
-### theme: oishi
-### theme: hexo-theme-sidebar
-### theme: TKL
-### theme: landscape
+- landscape
+- Tinnypp
+- oishi
+- hexo-theme-sidebar
+- TKL
+- landscape
 
 
 
@@ -62,6 +60,10 @@ hexo 的原生自带主题
 - `git commit -m "[comment-of-your-commit]"`
 - `git push [remote] [local]`
 
+## 遇到的问题
 
-### 关于 hexo 文件夹内容无法 push 到 github 上的解决方案
-### 关于主题文件夹无法 push 的解决方案
+问题的处理方案已经放到博客中：
+
+- 关于 hexo 文件夹内容无法 push 到 github 上的解决方案
+- 关于主题文件夹因为 modified content 导致无法 push 的解决方案
+- 如何处理 hexo 部署过程中遇到的 Deployer not found: git

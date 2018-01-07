@@ -492,7 +492,7 @@ use_motion: true
 fancybox: true
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 
 # three_waves
 three_waves: false

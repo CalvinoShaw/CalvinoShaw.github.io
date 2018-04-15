@@ -2,6 +2,7 @@
 title: 关于 hexo 的主题文件夹因为 modified content 而无法 push 的解决方案
 date: 2017-04-23 15:29:30
 tags: hexo
+categories: 代码如诗
 ---
 
 - 如果主题是经由`clone`安装的，在`push`源文件的时候，会发现即使添加了全部文件，主题文件夹也会提示`modified content`而无法被`staged`

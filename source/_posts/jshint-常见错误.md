@@ -2,6 +2,7 @@
 title: grunt自动化初探
 date: 2016-11-02 16:23:29
 tags: grunt
+categories: 代码如诗
 ---
 
 # 初步学习使用grunt

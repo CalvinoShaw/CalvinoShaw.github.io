@@ -2,6 +2,7 @@
 title: jQuery plugins
 date: 2016-10-29 09:43:03
 tags: jQuery
+categories: 代码如诗
 ---
 
 ## Jcrop

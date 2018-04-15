@@ -2,6 +2,7 @@
 title: 在 mac 上通过 virtualenv 安装 tensorflow
 date: 2017-05-01 10:47:49
 tags: tensorflow
+categories: 代码如诗
 ---
 ```
 sudo easy_install pip

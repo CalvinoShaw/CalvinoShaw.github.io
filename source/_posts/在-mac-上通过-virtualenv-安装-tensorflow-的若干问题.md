@@ -2,6 +2,7 @@
 title: 在 mac 上通过 virtualenv 安装 tensorflow 的若干问题
 date: 2017-04-30 23:15:30
 tags: tencorflow
+categories: 代码如诗
 ---
 
 [I try to install tencorflow via virtualenv in mac, the reference is here:](https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html#virtualenv-installation)

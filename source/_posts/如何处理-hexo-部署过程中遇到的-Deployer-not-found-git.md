@@ -2,6 +2,7 @@
 title: '如何处理 hexo 部署过程中遇到的 Deployer not found: git'
 date: 2017-04-23 15:13:46
 tags: hexo
+categories: 代码如诗
 ---
 
 对 hexo 进行部署，要进入 hexo 的系统配置`_config.yml`中，找到`deploy`这一项进行修改：

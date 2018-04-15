@@ -2,6 +2,7 @@
 title: JS模块化
 date: 2016-10-30 23:01:02
 tags: js
+categories: 代码如诗
 ---
 
 无封装

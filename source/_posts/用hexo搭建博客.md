@@ -1,7 +1,8 @@
 ---
-title: 用hexo搭建博客
+title: 为什么要写博客
 date: 2017-04-20 15:33:15
 tags: hexo
+categories: 代码如诗
 ---
 
 ## 为什么要写博客

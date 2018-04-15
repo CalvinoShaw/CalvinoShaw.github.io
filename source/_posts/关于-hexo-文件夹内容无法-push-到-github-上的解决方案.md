@@ -2,6 +2,7 @@
 title: 关于 hexo 文件夹内容无法 push 到 github 上的解决方案
 date: 2017-04-23 14:00:11
 tags: hexo
+categories: 代码如诗
 ---
 
 - 进入 hexo 的文件目录

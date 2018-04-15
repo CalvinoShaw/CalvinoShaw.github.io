@@ -2,6 +2,7 @@
 title: JS类库
 date: 2016-10-30 23:03:00
 tags: js
+categories: 代码如诗
 ---
 
 ## [Math.js](http://mathjs.org/)

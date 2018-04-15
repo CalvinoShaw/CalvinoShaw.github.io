@@ -2,6 +2,7 @@
 title: 学习给 ruby on rails 写前端
 date: 2016-10-31 10:24:51
 tags: ruby on rails
+categories: 代码如诗
 ---
 
 ## 10.31

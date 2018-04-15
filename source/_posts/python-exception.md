@@ -2,6 +2,7 @@
 title: python exception
 date: 2016-10-29 19:05:56
 tags: python
+categories: 代码如诗
 ---
 
 这里会记录从开始学 python 以来的遇到的所有错误、异常等等，有超链的通常即引向解决思路：

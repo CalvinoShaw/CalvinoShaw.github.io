@@ -76,5 +76,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
    type: git
-   repo: git@github.com:/CalvinoShaw/CalvinoShaw.github.io.git
+   # repo: git@github.com:/CalvinoShaw/CalvinoShaw.github.io.git
+   repo: https://github.com/CalvinoShaw/CalvinoShaw.github.io.git
    branch: master

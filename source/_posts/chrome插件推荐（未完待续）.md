@@ -1,5 +1,5 @@
 ---
-title: chrome插件推荐（未完成）
+title: chrome插件推荐（未完待续）
 date: 2017-04-27 23:25:02
 tags: chrome
 categories: 工具理性

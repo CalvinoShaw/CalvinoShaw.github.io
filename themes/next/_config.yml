@@ -164,7 +164,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: https://upload-images.jianshu.io/upload_images/61740-b329474ec05f868a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+avatar: https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0k/2d/vb_219210.jpg
 
 
 # Table Of Contents in the Sidebar

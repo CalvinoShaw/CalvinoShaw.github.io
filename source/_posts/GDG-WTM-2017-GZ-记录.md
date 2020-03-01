@@ -5,7 +5,8 @@ tags: 产品笔记
 categories: 产品笔记
 ---
 
-![一张合照](https://uploader.shimo.im/f/HEcPrl1TKJUUsSz6.png)
+![WTM.png](https://upload-images.jianshu.io/upload_images/61740-50daa02e13b21bc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ## 关于 GDG
 

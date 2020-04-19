@@ -24,7 +24,7 @@ categories: 产品笔记
 
 新闻流中加入了广告性质的格式，点击后可以呼出小程序，充分利用了小程序的接口能力。目前看到的是抽奖助手，应该还不算是外部广告主。记得从前的版本中，也已经在流中插入了部分广告，这次改版，广告在界面上的表现效果更加惹眼，尤其是在缩略模式下。虽然以这种高度显眼的形式来呈现，有打扰用户的风险在，但只要频数和广告内容控制得当，应该不会有大问题，反而对产品印象和商业模式可能有所助益。
 
-![信息流中的广告.png](https://upload-images.jianshu.io/upload_images/61740-86c65122448267bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![信息流中的广告.png](https://tva1.sinaimg.cn/large/007S8ZIlgy1gdzi71gc8vj30u00rwtjp.jpg)
 
 ##### 内容页的变化
 
@@ -36,6 +36,6 @@ categories: 产品笔记
 
 在目前事件追踪的时间线上，出现了准确度不佳的情况。比如下图的这条关于刺客信条的报道，事件追踪的发端事件是一个叫作 odyssey 的头显发布，这显然和刺客信条这个游戏没什么关系，但新发布刺客信条的确叫作奥德赛，可能是在处理相关性的时候，太过依赖关键词的作用了。处理文本之间叙事的相似性/相关性，需要深厚强大的自然语言处理功力。依靠关键词应该还不足以判定两个新闻是否在说同一件事情，如何在语义和时间上都相关，之后相信还会有深长的优化。
 
-![事件追踪.png](https://upload-images.jianshu.io/upload_images/61740-e659f68c31f60ff9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![事件追踪.png](https://tva1.sinaimg.cn/large/007S8ZIlgy1gdzi75qo7yj30u00s9tl9.jpg)
 
 深度有限，余不一一。readhub 会用什么样的姿态走下去，最终演化成为什么样子，真是值得期待。

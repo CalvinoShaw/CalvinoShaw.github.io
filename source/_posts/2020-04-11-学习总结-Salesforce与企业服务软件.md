@@ -6,6 +6,7 @@ categories: 学习总结
 ---
 
 ## 运作策略
+
 - 销售层面，让客户成为公司英雄
 - 市场层面：事件营销碰瓷大厂
 - 运营层面：用数据和工具赋能业务
@@ -28,19 +29,20 @@ SaaS供应商应该要想办法让客户成功，如果他们的服务无法为�
 
 ## 产品布局
 
-![](https://raw.githubusercontent.com/CalvinoShaw/picgo_picture_storage/master/1.png)
+- 产品布局和主打产品
+![1.png](https://i.loli.net/2020/04/19/ljaeQqrUvCLRIbo.png)
+![2.png](https://i.loli.net/2020/04/19/lJkqCr8FyINE2tG.png)
 
-![服务领域与主要产品线](https://raw.githubusercontent.com/CalvinoShaw/picgo_picture_storage/master/2.png)
+- 代表性的CRM界面
+![3.png](https://i.loli.net/2020/04/19/mdwgCDu2ZQ5qSYh.png)
 
-![代表性CRM界面](https://raw.githubusercontent.com/CalvinoShaw/picgo_picture_storage/master/3.png)
 
 ### 什么是CRM
 CRM即“客户关系管理”。Salesforce提供的客户关系管理软件是一款储存客户联系信息如姓名、地址和电话号码的软件，能够追踪客户各项活动如访问网站、打电话和发邮件等等。帮助企业管理并维护客户关系，增加与客户的互动，提升客户服务质量，完成更多交易。
 
 ### 典型产品：Sales Cloud
 
-![](https://raw.githubusercontent.com/CalvinoShaw/picgo_picture_storage/master/4.png)
-
+![4.png](https://i.loli.net/2020/04/19/Fon1rXpjUE6fhlu.png)
 
 ### 客户价值
 
@@ -48,12 +50,13 @@ CRM即“客户关系管理”。Salesforce提供的客户关系管理软件是�
 - 这是 2013 年调查出的结果，而公司在12年市场占有率达到第一，大概市占率在13%，这样看来，如果 5000 客户是整个 CRM 盘子的13%，那么12年 CRM 市场的体量，约有 3.8 万，盲估这几年有一定的增量，那么现在大概靠近 4 万家。
 - 补充一个其他的数据，2017 年左右，市占率达到20%，市值达到 1300 亿美元，那么17年，整个 CRM 的市场价值达到 6500 亿美元，往大了算增长，现在可能已经接近 7000 亿美金了。折合成人民币，想要好记一些，大概就是 **4 万家客户，4 万亿人民币市场价值**
 
-![](https://raw.githubusercontent.com/CalvinoShaw/picgo_picture_storage/master/5.png)
+![5.png](https://i.loli.net/2020/04/19/Zji7bA4GMWlK1cR.png)
 
 
 ### 定价策略
 
-![](https://raw.githubusercontent.com/CalvinoShaw/picgo_picture_storage/master/6.png)
+![6.png](https://i.loli.net/2020/04/19/NBASh6zCojY18dL.png)
+
 
 ## 其他
 

@@ -1,0 +1,934 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="产品,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="前言一个周末看完了刘飞的这本书，算是依据自己的当前认知，多少有些收获。交互设计，需求管理，这些能再吸收的新东西已经不多，刘飞大多也是摘取和重新诠释其他更加专业的书籍和观点。但在一些结构性知识上，以及一些思维方式上，还是有所启发。一路看下来，催生了一个想法：现在市场上的这些产品类书籍，框架无出其右，都是差不多一样的东西。这本书是刘飞工作了四年后写的，我工作了两年，我是怎么来看待这一套产品经理的认知框">
+<meta name="keywords" content="产品">
+<meta property="og:type" content="article">
+<meta property="og:title" content="札记-刘飞《从点子到产品》">
+<meta property="og:url" content="http://yoursite.com/2019/09/02/札记-刘飞《从点子到产品》/index.html">
+<meta property="og:site_name" content="Calvino">
+<meta property="og:description" content="前言一个周末看完了刘飞的这本书，算是依据自己的当前认知，多少有些收获。交互设计，需求管理，这些能再吸收的新东西已经不多，刘飞大多也是摘取和重新诠释其他更加专业的书籍和观点。但在一些结构性知识上，以及一些思维方式上，还是有所启发。一路看下来，催生了一个想法：现在市场上的这些产品类书籍，框架无出其右，都是差不多一样的东西。这本书是刘飞工作了四年后写的，我工作了两年，我是怎么来看待这一套产品经理的认知框">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-08-27T07:30:12.424Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="札记-刘飞《从点子到产品》">
+<meta name="twitter:description" content="前言一个周末看完了刘飞的这本书，算是依据自己的当前认知，多少有些收获。交互设计，需求管理，这些能再吸收的新东西已经不多，刘飞大多也是摘取和重新诠释其他更加专业的书籍和观点。但在一些结构性知识上，以及一些思维方式上，还是有所启发。一路看下来，催生了一个想法：现在市场上的这些产品类书籍，框架无出其右，都是差不多一样的东西。这本书是刘飞工作了四年后写的，我工作了两年，我是怎么来看待这一套产品经理的认知框">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/09/02/札记-刘飞《从点子到产品》/">
+
+
+
+
+
+  <title> 札记-刘飞《从点子到产品》 | Calvino </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65509378";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Calvino</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">苍穹煮雨</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/02/札记-刘飞《从点子到产品》/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Calvino Shaw">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0k/2d/vb_219210.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Calvino">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                札记-刘飞《从点子到产品》
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-02T00:20:20+08:00">
+                2019-09-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/产品笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">产品笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一个周末看完了刘飞的这本书，算是依据自己的当前认知，多少有些收获。交互设计，需求管理，这些能再吸收的新东西已经不多，刘飞大多也是摘取和重新诠释其他更加专业的书籍和观点。但在一些结构性知识上，以及一些思维方式上，还是有所启发。一路看下来，催生了一个想法：现在市场上的这些产品类书籍，框架无出其右，都是差不多一样的东西。这本书是刘飞工作了四年后写的，我工作了两年，我是怎么来看待这一套产品经理的认知框架和方法论的呢？能不能把我在各个方面的认知，也写下来。半年后，一年后，两年后，更新一次，更新两次，看看是不是有进步，就当成是自己沉淀的一个可扩展的框架。</p>
+<p>注意到几点：</p>
+<ul>
+<li>可能因为刘飞做了嘟嘟美甲，是涉及线下业务，所以在书中偶尔会留意提及线下方法</li>
+<li>书中虽然划分了层级和结构，乍看之下也较为工整，但是实际上有多章的内容是相互关联的，但被拆分开，尽管刘飞尽可能地避免了重复论述，但仍然有些凌乱。</li>
+</ul>
+<hr>
+<h2 id="刘飞谈到的话题"><a href="#刘飞谈到的话题" class="headerlink" title="刘飞谈到的话题"></a>刘飞谈到的话题</h2><h3 id="产品模型"><a href="#产品模型" class="headerlink" title="产品模型"></a>产品模型</h3><p>产品模型的检验矩阵（表格）</p>
+<p>是否能够：提高或者不降低效率、降低或者不提升成本、提升或者不破坏体验<br>是否合理：提供的可能、发生的场景、接受的意愿（人性）<br>是否存在：市场、需求、用户</p>
+<h3 id="商业模式"><a href="#商业模式" class="headerlink" title="商业模式"></a>商业模式</h3><ul>
+<li>广告</li>
+<li>售卖</li>
+<li>增值服务</li>
+<li>佣金/抽成</li>
+<li>企业服务</li>
+<li>比别人早得到的权利，或者说时效性权利</li>
+<li>差异化服务</li>
+<li>更容易获取</li>
+<li>打赏、赞助、或者说粉丝经济</li>
+</ul>
+<h3 id="用户行为分析"><a href="#用户行为分析" class="headerlink" title="用户行为分析"></a>用户行为分析</h3><ul>
+<li>刘飞的用户转移公式：转移超预期的愉悦和实际好处X &gt; 转移心理成本Y1 + 转移实际成本Y2</li>
+</ul>
+<h3 id="MVP方法"><a href="#MVP方法" class="headerlink" title="MVP方法"></a>MVP方法</h3><ul>
+<li>设计方法：奥卡姆剃刀、用户访谈、可以人工处理的人工处理、确保只有一个功能</li>
+<li>MVP验证方法：广告、视觉效果、众筹、线下</li>
+</ul>
+<h3 id="关于需求挖掘"><a href="#关于需求挖掘" class="headerlink" title="关于需求挖掘"></a>关于需求挖掘</h3><ul>
+<li>基于场景</li>
+<li>基于人性：刘飞直接列举了例如「懒惰」这样的性格，但可以用更加成体系的方式来构建，马斯洛、七宗罪、佛教、心理学，应该可以覆盖全。</li>
+</ul>
+<h3 id="用户访谈"><a href="#用户访谈" class="headerlink" title="用户访谈"></a>用户访谈</h3><ul>
+<li>常见的用户研究方法分类（四象限）</li>
+</ul>
+<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><ul>
+<li>蜂窝模型，peter moville</li>
+<li>点石成金</li>
+<li>5E原则，用户体验设计</li>
+<li>五层模型，用户体验要素</li>
+</ul>
+<h3 id="产品文档"><a href="#产品文档" class="headerlink" title="产品文档"></a>产品文档</h3><ul>
+<li>需求文档写法：需求用例模板（表格）<ul>
+<li>场景、用户需求（解决什么问题）、前置条件、需求详述、后置条件、补充说明</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="摘记"><a href="#摘记" class="headerlink" title="摘记"></a>摘记</h2><p>书里面提到的一些引起我留意或者想要 mark 的内容，记录在这里：</p>
+<ul>
+<li>BLUES 翻译过一系列「黑魔法」相关的文章</li>
+<li>Do things don’t scale. — Paul Graham</li>
+<li>MVP 与 PMF</li>
+<li>需求管理：四象限法、KANO模型</li>
+</ul>
+<h2 id="可以重新整理的体系和话题"><a href="#可以重新整理的体系和话题" class="headerlink" title="可以重新整理的体系和话题"></a>可以重新整理的体系和话题</h2><p>回到最开始说过的，刘飞的分类我看到最后还是觉得有些凌乱，想要重新整理，所以半是依据刘飞讨论过的点，半是补充或者调整加入了自己想要的讨论的问题，这底下，应该每一行都足以进行展开。另外也是想要看看对于同样的议题，我能够有多丰富的经历，多深入的思考。在饭否上看过一句话，「经历转化为判断力」，深以为然，我希望自己最终能够如此。</p>
+<h3 id="产品设计"><a href="#产品设计" class="headerlink" title="产品设计"></a>产品设计</h3><ul>
+<li>产品模式设计<ul>
+<li>关于产品价值：产品设计的指导体系</li>
+<li>关于模式设计：产品模型、盈利模式、商业模式</li>
+<li>关于想法验证：MVP与产品验证</li>
+<li>关于用户体验</li>
+</ul>
+</li>
+</ul>
+<h3 id="需求与文档管理"><a href="#需求与文档管理" class="headerlink" title="需求与文档管理"></a>需求与文档管理</h3><ul>
+<li>关于需求挖掘<ul>
+<li>需求的来源</li>
+<li>如何进行用户研究</li>
+</ul>
+</li>
+<li>关于一份好的产品文档</li>
+</ul>
+<h3 id="工作流与产品管理"><a href="#工作流与产品管理" class="headerlink" title="工作流与产品管理"></a>工作流与产品管理</h3><ul>
+<li>关于产研协作工作流：开会、记录、复盘</li>
+<li>如何看待外包</li>
+<li>关于复盘</li>
+</ul>
+<h3 id="产品经理能力"><a href="#产品经理能力" class="headerlink" title="产品经理能力"></a>产品经理能力</h3><ul>
+<li>产品经理的核心价值：<ul>
+<li>核心价值、本质？</li>
+<li>产品经理、产品？</li>
+</ul>
+</li>
+<li>如何看待工作中遇到的问题</li>
+<li>如何看待沟通</li>
+<li>产品经理要不要懂技术</li>
+<li>如何看待个人职业成长<ul>
+<li>如何看待导师与团队</li>
+</ul>
+</li>
+<li>关于产品经理的职业禀赋与素养<ul>
+<li>专业素养：需求分析、功能设计、项目跟进、行业知识</li>
+<li>非专业素养：自驱、兴趣、责任心</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>「用文字打败时间」</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="Calvino Shaw WeChat Pay">
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.png" alt="Calvino Shaw Alipay">
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品/" rel="tag"># 产品</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/24/浮世绘/" rel="next" title="浮世绘">
+                <i class="fa fa-chevron-left"></i> 浮世绘
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/02/Chrome-插件推荐/" rel="prev" title="2019年 Chrome 插件推荐">
+                2019年 Chrome 插件推荐 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0k/2d/vb_219210.jpg" alt="Calvino Shaw">
+          <p class="site-author-name" itemprop="name">Calvino Shaw</p>
+           
+              <p class="site-description motion-element" itemprop="description">know your self</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/CalvinoShaw/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/calvinoshaw" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://douban.com/people/76292740/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/lossmiss/" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yinwang.org/" title="当然我在扯淡" target="_blank">当然我在扯淡</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://cike.info/" title="Moose的此刻" target="_blank">Moose的此刻</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刘飞谈到的话题"><span class="nav-number">2.</span> <span class="nav-text">刘飞谈到的话题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#产品模型"><span class="nav-number">2.1.</span> <span class="nav-text">产品模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#商业模式"><span class="nav-number">2.2.</span> <span class="nav-text">商业模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户行为分析"><span class="nav-number">2.3.</span> <span class="nav-text">用户行为分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP方法"><span class="nav-number">2.4.</span> <span class="nav-text">MVP方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于需求挖掘"><span class="nav-number">2.5.</span> <span class="nav-text">关于需求挖掘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户访谈"><span class="nav-number">2.6.</span> <span class="nav-text">用户访谈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户体验"><span class="nav-number">2.7.</span> <span class="nav-text">用户体验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产品文档"><span class="nav-number">2.8.</span> <span class="nav-text">产品文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#摘记"><span class="nav-number">3.</span> <span class="nav-text">摘记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可以重新整理的体系和话题"><span class="nav-number">4.</span> <span class="nav-text">可以重新整理的体系和话题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#产品设计"><span class="nav-number">4.1.</span> <span class="nav-text">产品设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求与文档管理"><span class="nav-number">4.2.</span> <span class="nav-text">需求与文档管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作流与产品管理"><span class="nav-number">4.3.</span> <span class="nav-text">工作流与产品管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产品经理能力"><span class="nav-number">4.4.</span> <span class="nav-text">产品经理能力</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Calvino Shaw</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

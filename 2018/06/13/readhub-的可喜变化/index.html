@@ -1,0 +1,853 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="产品笔记,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="写在前面自 readhub 诞生以来，一直对这个产品保持着关注，自己觉得非常受用。今天打开小程序，发现 readhub 更新且有了令人眼前一亮的可喜变化。主页的变化 设置按钮小程序主页左上角开始添加了按钮，目前可以控制版面，在隐藏。以【设置】的样式来收纳，为今后可能出现的新特性预留了不小的扩展空间。 版面控制缩略更加缩略，详情更加详情。设置中选择隐藏话题摘要后，消息流中只剩下标题；关闭隐藏后，放出">
+<meta name="keywords" content="产品笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="readhub 的可喜变化">
+<meta property="og:url" content="http://yoursite.com/2018/06/13/readhub-的可喜变化/index.html">
+<meta property="og:site_name" content="Calvino">
+<meta property="og:description" content="写在前面自 readhub 诞生以来，一直对这个产品保持着关注，自己觉得非常受用。今天打开小程序，发现 readhub 更新且有了令人眼前一亮的可喜变化。主页的变化 设置按钮小程序主页左上角开始添加了按钮，目前可以控制版面，在隐藏。以【设置】的样式来收纳，为今后可能出现的新特性预留了不小的扩展空间。 版面控制缩略更加缩略，详情更加详情。设置中选择隐藏话题摘要后，消息流中只剩下标题；关闭隐藏后，放出">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdzi71gc8vj30u00rwtjp.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdzi75qo7yj30u00s9tl9.jpg">
+<meta property="og:updated_time" content="2020-08-27T07:30:12.561Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="readhub 的可喜变化">
+<meta name="twitter:description" content="写在前面自 readhub 诞生以来，一直对这个产品保持着关注，自己觉得非常受用。今天打开小程序，发现 readhub 更新且有了令人眼前一亮的可喜变化。主页的变化 设置按钮小程序主页左上角开始添加了按钮，目前可以控制版面，在隐藏。以【设置】的样式来收纳，为今后可能出现的新特性预留了不小的扩展空间。 版面控制缩略更加缩略，详情更加详情。设置中选择隐藏话题摘要后，消息流中只剩下标题；关闭隐藏后，放出">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdzi71gc8vj30u00rwtjp.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/13/readhub-的可喜变化/">
+
+
+
+
+
+  <title> readhub 的可喜变化 | Calvino </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65509378";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Calvino</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">苍穹煮雨</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/13/readhub-的可喜变化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Calvino Shaw">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0k/2d/vb_219210.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Calvino">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                readhub 的可喜变化
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T11:39:38+08:00">
+                2018-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/产品笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">产品笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>自 readhub 诞生以来，一直对这个产品保持着关注，自己觉得非常受用。今天打开小程序，发现 readhub 更新且有了令人眼前一亮的可喜变化。<br>主页的变化</p>
+<h5 id="设置按钮"><a href="#设置按钮" class="headerlink" title="设置按钮"></a>设置按钮</h5><p>小程序主页左上角开始添加了按钮，目前可以控制版面，在隐藏。以【设置】的样式来收纳，为今后可能出现的新特性预留了不小的扩展空间。</p>
+<h5 id="版面控制"><a href="#版面控制" class="headerlink" title="版面控制"></a>版面控制</h5><p>缩略更加缩略，详情更加详情。设置中选择隐藏话题摘要后，消息流中只剩下标题；关闭隐藏后，放出了更多的信息，包括标题+摘要+舆情+来源和外链。内容的上浮让信息获取的路径有了明显的缩短，消息流页面的停留时间占比应该会因此有增长。</p>
+<p>舆情的引入可以说是这次最让人惊喜的变化之一。目前观察到的格式包括：62.3%的用户看好、42.1%的用户觉得意外、21人已赞、14人已喜欢等。舆论偏爱争议性的话题，受众态度的开放对消息详情的点击率的提高会有帮助，如果需要利用这部分数据进行科技新闻的舆情分析，也能有一定的参考价值。</p>
+<h5 id="广告格式"><a href="#广告格式" class="headerlink" title="广告格式"></a>广告格式</h5><p>新闻流中加入了广告性质的格式，点击后可以呼出小程序，充分利用了小程序的接口能力。目前看到的是抽奖助手，应该还不算是外部广告主。记得从前的版本中，也已经在流中插入了部分广告，这次改版，广告在界面上的表现效果更加惹眼，尤其是在缩略模式下。虽然以这种高度显眼的形式来呈现，有打扰用户的风险在，但只要频数和广告内容控制得当，应该不会有大问题，反而对产品印象和商业模式可能有所助益。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdzi71gc8vj30u00rwtjp.jpg" alt="信息流中的广告.png"></p>
+<h5 id="内容页的变化"><a href="#内容页的变化" class="headerlink" title="内容页的变化"></a>内容页的变化</h5><p>除了之前从卡片式到面式，引入了相关报道，这次发生的显著变化是加上了用户表态和事件追踪这两个小模块。</p>
+<p>事件追踪对于了解一个新闻的全貌和理性认知有很大帮助，自己曾经做过新闻事件的梳理，这部分工作人工处理起来会耗费大量的时间和心神，同时触达的信息广度有限。新闻跟踪并不是一个新事物了，但一个信息聚合应用能注意到这一点，并在尝试用自动化的方式来处理，是非常好的。</p>
+<p>但目前这个功能在事件判定上的误差，影响了它的准确性和可信度。事件追踪本身应该是针对同一个事件在时间上的线性溯源，范畴最多从产品提及到行业，但离不开一个相关。</p>
+<p>在目前事件追踪的时间线上，出现了准确度不佳的情况。比如下图的这条关于刺客信条的报道，事件追踪的发端事件是一个叫作 odyssey 的头显发布，这显然和刺客信条这个游戏没什么关系，但新发布刺客信条的确叫作奥德赛，可能是在处理相关性的时候，太过依赖关键词的作用了。处理文本之间叙事的相似性/相关性，需要深厚强大的自然语言处理功力。依靠关键词应该还不足以判定两个新闻是否在说同一件事情，如何在语义和时间上都相关，之后相信还会有深长的优化。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdzi75qo7yj30u00s9tl9.jpg" alt="事件追踪.png"></p>
+<p>深度有限，余不一一。readhub 会用什么样的姿态走下去，最终演化成为什么样子，真是值得期待。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>「用文字打败时间」</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="Calvino Shaw WeChat Pay">
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.png" alt="Calvino Shaw Alipay">
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品笔记/" rel="tag"># 产品笔记</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/12/关于广告系统/" rel="next" title="关于广告系统">
+                <i class="fa fa-chevron-left"></i> 关于广告系统
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/19/互动性：游戏、故事、玩具/" rel="prev" title="互动性：游戏、故事、玩具">
+                互动性：游戏、故事、玩具 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0k/2d/vb_219210.jpg" alt="Calvino Shaw">
+          <p class="site-author-name" itemprop="name">Calvino Shaw</p>
+           
+              <p class="site-description motion-element" itemprop="description">know your self</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/CalvinoShaw/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/calvinoshaw" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://douban.com/people/76292740/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/lossmiss/" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yinwang.org/" title="当然我在扯淡" target="_blank">当然我在扯淡</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://cike.info/" title="Moose的此刻" target="_blank">Moose的此刻</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#设置按钮"><span class="nav-number">1.0.1.</span> <span class="nav-text">设置按钮</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#版面控制"><span class="nav-number">1.0.2.</span> <span class="nav-text">版面控制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#广告格式"><span class="nav-number">1.0.3.</span> <span class="nav-text">广告格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#内容页的变化"><span class="nav-number">1.0.4.</span> <span class="nav-text">内容页的变化</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Calvino Shaw</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

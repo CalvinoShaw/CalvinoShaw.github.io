@@ -1,0 +1,911 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="B端,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="运作策略 销售层面，让客户成为公司英雄 市场层面：事件营销碰瓷大厂 运营层面：用数据和工具赋能业务 产品层面：不只做客户想要的东西  销售层面：客户成功SaaS供应商应该要想办法让客户成功，如果他们的服务无法为客户提供价值，无法让采购决策者装逼，客户将不再续约。 运营层面 Salesfoce要求运营承担“产品-市场-销售-客户成功”串联角色 内容策略：是负责按行业、客户旅程、传播平台，来制定内容传">
+<meta name="keywords" content="B端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习总结 - Salesforce与企业服务软件">
+<meta property="og:url" content="http://yoursite.com/2020/04/11/学习总结-Salesforce与企业服务软件/index.html">
+<meta property="og:site_name" content="Calvino">
+<meta property="og:description" content="运作策略 销售层面，让客户成为公司英雄 市场层面：事件营销碰瓷大厂 运营层面：用数据和工具赋能业务 产品层面：不只做客户想要的东西  销售层面：客户成功SaaS供应商应该要想办法让客户成功，如果他们的服务无法为客户提供价值，无法让采购决策者装逼，客户将不再续约。 运营层面 Salesfoce要求运营承担“产品-市场-销售-客户成功”串联角色 内容策略：是负责按行业、客户旅程、传播平台，来制定内容传">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2020/04/19/ljaeQqrUvCLRIbo.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/19/lJkqCr8FyINE2tG.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/19/mdwgCDu2ZQ5qSYh.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/19/Fon1rXpjUE6fhlu.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/19/Zji7bA4GMWlK1cR.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/19/NBASh6zCojY18dL.png">
+<meta property="og:updated_time" content="2020-08-27T07:30:12.526Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习总结 - Salesforce与企业服务软件">
+<meta name="twitter:description" content="运作策略 销售层面，让客户成为公司英雄 市场层面：事件营销碰瓷大厂 运营层面：用数据和工具赋能业务 产品层面：不只做客户想要的东西  销售层面：客户成功SaaS供应商应该要想办法让客户成功，如果他们的服务无法为客户提供价值，无法让采购决策者装逼，客户将不再续约。 运营层面 Salesfoce要求运营承担“产品-市场-销售-客户成功”串联角色 内容策略：是负责按行业、客户旅程、传播平台，来制定内容传">
+<meta name="twitter:image" content="https://i.loli.net/2020/04/19/ljaeQqrUvCLRIbo.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/04/11/学习总结-Salesforce与企业服务软件/">
+
+
+
+
+
+  <title> 学习总结 - Salesforce与企业服务软件 | Calvino </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65509378";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Calvino</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">苍穹煮雨</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/11/学习总结-Salesforce与企业服务软件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Calvino Shaw">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0k/2d/vb_219210.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Calvino">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                学习总结 - Salesforce与企业服务软件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-11T19:10:17+08:00">
+                2020-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习总结/" itemprop="url" rel="index">
+                    <span itemprop="name">学习总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="运作策略"><a href="#运作策略" class="headerlink" title="运作策略"></a>运作策略</h2><ul>
+<li>销售层面，让客户成为公司英雄</li>
+<li>市场层面：事件营销碰瓷大厂</li>
+<li>运营层面：用数据和工具赋能业务</li>
+<li>产品层面：不只做客户想要的东西</li>
+</ul>
+<h3 id="销售层面：客户成功"><a href="#销售层面：客户成功" class="headerlink" title="销售层面：客户成功"></a>销售层面：客户成功</h3><p>SaaS供应商应该要想办法让客户成功，如果他们的服务无法为客户提供价值，无法让采购决策者装逼，客户将不再续约。</p>
+<h3 id="运营层面"><a href="#运营层面" class="headerlink" title="运营层面"></a>运营层面</h3><ul>
+<li>Salesfoce要求运营承担“产品-市场-销售-客户成功”串联角色<ul>
+<li>内容策略：是负责按行业、客户旅程、传播平台，来制定内容传播主题和计划；</li>
+<li>内容编辑：则是负责采访、撰写、录制有助于产品销售的原生内容；</li>
+<li>内容营销：则是负责将这些内容传播出去，包含内容投放和内容整合营销；</li>
+<li>内容运营：则是负责让企业销售人员进行传播，通过工具和数据来进行传播检测，同时会帮助编辑团队梳理内容生产流程。</li>
+</ul>
+</li>
+</ul>
+<h2 id="产品布局"><a href="#产品布局" class="headerlink" title="产品布局"></a>产品布局</h2><ul>
+<li><p>产品布局和主打产品<br><img src="https://i.loli.net/2020/04/19/ljaeQqrUvCLRIbo.png" alt="1.png"><br><img src="https://i.loli.net/2020/04/19/lJkqCr8FyINE2tG.png" alt="2.png"></p>
+</li>
+<li><p>代表性的CRM界面<br><img src="https://i.loli.net/2020/04/19/mdwgCDu2ZQ5qSYh.png" alt="3.png"></p>
+</li>
+</ul>
+<h3 id="什么是CRM"><a href="#什么是CRM" class="headerlink" title="什么是CRM"></a>什么是CRM</h3><p>CRM即“客户关系管理”。Salesforce提供的客户关系管理软件是一款储存客户联系信息如姓名、地址和电话号码的软件，能够追踪客户各项活动如访问网站、打电话和发邮件等等。帮助企业管理并维护客户关系，增加与客户的互动，提升客户服务质量，完成更多交易。</p>
+<h3 id="典型产品：Sales-Cloud"><a href="#典型产品：Sales-Cloud" class="headerlink" title="典型产品：Sales Cloud"></a>典型产品：Sales Cloud</h3><p><img src="https://i.loli.net/2020/04/19/Fon1rXpjUE6fhlu.png" alt="4.png"></p>
+<h3 id="客户价值"><a href="#客户价值" class="headerlink" title="客户价值"></a>客户价值</h3><ul>
+<li>可以看到产品的主要价值 Salesforce 用三个指标来衡量，但调查的样本是 5200 个，对于B端企业来讲，这是极其难以拥有的客户数，多数B端企业，只能用头部客户案例来证明价值，数据往往不是均值，或者具备其他的统计意义</li>
+<li>这是 2013 年调查出的结果，而公司在12年市场占有率达到第一，大概市占率在13%，这样看来，如果 5000 客户是整个 CRM 盘子的13%，那么12年 CRM 市场的体量，约有 3.8 万，盲估这几年有一定的增量，那么现在大概靠近 4 万家。</li>
+<li>补充一个其他的数据，2017 年左右，市占率达到20%，市值达到 1300 亿美元，那么17年，整个 CRM 的市场价值达到 6500 亿美元，往大了算增长，现在可能已经接近 7000 亿美金了。折合成人民币，想要好记一些，大概就是 <strong>4 万家客户，4 万亿人民币市场价值</strong></li>
+</ul>
+<p><img src="https://i.loli.net/2020/04/19/Zji7bA4GMWlK1cR.png" alt="5.png"></p>
+<h3 id="定价策略"><a href="#定价策略" class="headerlink" title="定价策略"></a>定价策略</h3><p><img src="https://i.loli.net/2020/04/19/NBASh6zCojY18dL.png" alt="6.png"></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>有赞创始人@白鸦，曾在内部培训时对外发布的《产品设计原则》提到，一个好的产品，一定是既要满足客户需求，对用户产生价值，同时也要满足公司商业需求，帮助公司产生利润。</li>
+<li>创始人马克·贝尼奥夫（MarcBenioff）在创办Salesforce之前是甲骨文公司最年轻的高级副总裁。他开始对于甲骨文这种卖大型软件然后一次性收取高昂费用，同时每年收取维护费用的商业模式产生反思，逐渐产生互联网会从本质上改变软件业的想法。他认为，在未来软件将不复存在，留下来的是服务，即SaaS（SoftwareasaService）。</li>
+<li>我们都知道2B发展是三种能力的叠加，销售能力、产品能力、服务能力的叠加。<ul>
+<li>野蛮生长阶段大家基本上排序是<strong>销售第一、产品第二、服务第三</strong>。<strong>这会带来很多问题</strong>。<ul>
+<li>销售排在第一存在过度营销问题。很多不是你的客户、不是高价值客户，销售人员也把他拉为你的客户。但是这些客户可能都不具备付费的能力。</li>
+<li>产品排在后面导致满足中大客户产品能力不足。从中小到总大做转变的时候发现非常困难，中大客户不买单。</li>
+<li>服务排到最后导致最核心问题：SaaS商业模式不成立。我们知道SaaS商业模式能够成立能够性感最重要原因是可以坐在那里收钱。这是非常非常重要一点，<strong>续费率</strong>一定要要达到非常高的水平，这个商业模式才成立。</li>
+<li><strong>产品放在第一位，服务放在第二位，销售放在第三位</strong>。这其实是我们看到市场发生非常重要的变化。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>如果你的产品没有移动化的基因，商业模式没有互联网化的基因，难免会陷入到传统软件公司发展的桎梏里，发展成业内叫「小老头公司」，发展不下去了，几千万收入就再也上不去了，陷入定制化开发等传统方式里去了。</li>
+</ul>
+<h2 id="历程"><a href="#历程" class="headerlink" title="历程"></a>历程</h2><ul>
+<li>2004年，Salesforce上市，成为了一家市值10亿美元左右的上市公司，股票代码CRM。颇有点Salesforce就是CRM的意思。</li>
+<li>2008年Salseforce推出Force.com，这是世界上第一个可以在统一架构上部署应用的PaaS（平台即服务）平台，可以将其理解为一整套直接服务于SaaS开发的底层架构</li>
+<li>2012年市场占有率第一（对比SAP和ORACLE）</li>
+<li>2009至今的新布局：<ul>
+<li>完善CRM四大领域布局，积极打造“CRM+AI+数据”的完整生态<ul>
+<li>客服</li>
+<li>销售型CRM</li>
+<li>营销型CRM</li>
+<li>电商</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li>官网：<a href="https://www.salesforce.com/cn/crm/" target="_blank" rel="noopener">https://www.salesforce.com/cn/crm/</a></li>
+<li>被腾讯们“借鉴”的ToB企业，千亿美金市值背后有何运营门道？<a href="https://36kr.com/p/5261236" target="_blank" rel="noopener">https://36kr.com/p/5261236</a></li>
+<li>做阉割版Salesforce难成伟大的TOB企业：<a href="https://www.lieyunwang.com/archives/446227" target="_blank" rel="noopener">https://www.lieyunwang.com/archives/446227</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>「用文字打败时间」</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="Calvino Shaw WeChat Pay">
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.png" alt="Calvino Shaw Alipay">
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/B端/" rel="tag"># B端</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/18/二零一九｜未接来电 /" rel="next" title="二零一九|未接来电">
+                <i class="fa fa-chevron-left"></i> 二零一九|未接来电
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/12/知识图谱学习/" rel="prev" title="学习总结 - 知识图谱概览">
+                学习总结 - 知识图谱概览 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0k/2d/vb_219210.jpg" alt="Calvino Shaw">
+          <p class="site-author-name" itemprop="name">Calvino Shaw</p>
+           
+              <p class="site-description motion-element" itemprop="description">know your self</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/CalvinoShaw/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/calvinoshaw" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://douban.com/people/76292740/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/lossmiss/" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yinwang.org/" title="当然我在扯淡" target="_blank">当然我在扯淡</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://cike.info/" title="Moose的此刻" target="_blank">Moose的此刻</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#运作策略"><span class="nav-number">1.</span> <span class="nav-text">运作策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#销售层面：客户成功"><span class="nav-number">1.1.</span> <span class="nav-text">销售层面：客户成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运营层面"><span class="nav-number">1.2.</span> <span class="nav-text">运营层面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#产品布局"><span class="nav-number">2.</span> <span class="nav-text">产品布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是CRM"><span class="nav-number">2.1.</span> <span class="nav-text">什么是CRM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#典型产品：Sales-Cloud"><span class="nav-number">2.2.</span> <span class="nav-text">典型产品：Sales Cloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户价值"><span class="nav-number">2.3.</span> <span class="nav-text">客户价值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定价策略"><span class="nav-number">2.4.</span> <span class="nav-text">定价策略</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">3.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#历程"><span class="nav-number">4.</span> <span class="nav-text">历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Calvino Shaw</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

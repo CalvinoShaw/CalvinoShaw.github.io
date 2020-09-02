@@ -1,0 +1,869 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="产品,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="写在前面做产品这一年来，可以说第一个独立进行了比较深入思考的模块，是广告系统。在没有人带，缺乏指导的情况下，野生地做起一套满足业务需求的广告管理系统，现在再回去看，满满地都是缺点。但是这个过程中，也积累了一些思考，复盘如下：  业务决定一切。 策略是核心。 不可避免的定制化与抗击定制化。 基础设施。   业务决定一切广告系统的定位和目的，决定了这个系统，无论在功能上如何布局，交互上如何处理，策略上">
+<meta name="keywords" content="产品">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于广告系统">
+<meta property="og:url" content="https://calvinoshaw.github.io/2018/05/12/关于广告系统/index.html">
+<meta property="og:site_name" content="Calvino">
+<meta property="og:description" content="写在前面做产品这一年来，可以说第一个独立进行了比较深入思考的模块，是广告系统。在没有人带，缺乏指导的情况下，野生地做起一套满足业务需求的广告管理系统，现在再回去看，满满地都是缺点。但是这个过程中，也积累了一些思考，复盘如下：  业务决定一切。 策略是核心。 不可避免的定制化与抗击定制化。 基础设施。   业务决定一切广告系统的定位和目的，决定了这个系统，无论在功能上如何布局，交互上如何处理，策略上">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://calvinoshaw.github.io/2018/05/12/关于广告系统/1.png">
+<meta property="og:updated_time" content="2020-08-27T07:30:12.406Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于广告系统">
+<meta name="twitter:description" content="写在前面做产品这一年来，可以说第一个独立进行了比较深入思考的模块，是广告系统。在没有人带，缺乏指导的情况下，野生地做起一套满足业务需求的广告管理系统，现在再回去看，满满地都是缺点。但是这个过程中，也积累了一些思考，复盘如下：  业务决定一切。 策略是核心。 不可避免的定制化与抗击定制化。 基础设施。   业务决定一切广告系统的定位和目的，决定了这个系统，无论在功能上如何布局，交互上如何处理，策略上">
+<meta name="twitter:image" content="https://calvinoshaw.github.io/2018/05/12/关于广告系统/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://calvinoshaw.github.io/2018/05/12/关于广告系统/">
+
+
+
+
+
+  <title> 关于广告系统 | Calvino </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65509378";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Calvino</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">苍穹煮雨</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://calvinoshaw.github.io/2018/05/12/关于广告系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Calvino Shaw">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0k/2d/vb_219210.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Calvino">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                关于广告系统
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-12T18:42:38+08:00">
+                2018-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/产品笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">产品笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>做产品这一年来，可以说第一个独立进行了比较深入思考的模块，是广告系统。在没有人带，缺乏指导的情况下，野生地做起一套满足业务需求的广告管理系统，现在再回去看，满满地都是缺点。但是这个过程中，也积累了一些思考，复盘如下：</p>
+<ol>
+<li>业务决定一切。</li>
+<li>策略是核心。</li>
+<li>不可避免的定制化与抗击定制化。</li>
+<li>基础设施。</li>
+</ol>
+<hr>
+<h4 id="业务决定一切"><a href="#业务决定一切" class="headerlink" title="业务决定一切"></a>业务决定一切</h4><p>广告系统的定位和目的，决定了这个系统，无论在功能上如何布局，交互上如何处理，策略上如何考虑，业务——都是必须遵循的最为核心的一点。当广告业务需求出现时，意味着系统中没有的功能可能要进行开发，系统中已有的功能可能要进行剔除或者修改，从而来满足业务方的需求。这与其他所有的互联网产品并无二致，甚至，由于广告系统本身倾向的 toB 性质，这种对业务方的依赖、承诺和服务，相较于 C 端产品来说，更加强烈。</p>
+<hr>
+<h4 id="策略是核心"><a href="#策略是核心" class="headerlink" title="策略是核心"></a>策略是核心</h4><p>广告系统面向的用户并不单一，对系统层面，系统使用者是我们的用户，对用户端，大面积的广告受众也是我们的用户。广告系统的核心体验，要对这两类用户负责。</p>
+<p>在操作流程上，作为一种后台类产品，对于系统使用者而言，广告系统操作的明确性、良好的预期和流程的稳健程度，比起界面呈现效果，是更加核心的用户体验。除了易读的系统使用说明，广告系统最应该具备的，应该是易上手、无歧义的操作风格。因为广告系统的开发团队往往不会是广告主，而广告主才是系统真正的操作人员。这就要求产品经理在系统的设计上，从一开始就应该做好明确的用户调研。在开发广告系统的过程中，这一点自己做的并不够好，导致几个模块上线后，运营方反复询问应该如何使用，甚至会出现误操作的情况。这是广告系统产品经理应该注意和避免的，切忌想当然地进行功能设计，对方的使用习惯，才是更需要考虑的标准。</p>
+<p>在投放策略上，广告系统中的操作，直接决定了广告在受众端的展示效果。一个广告，展示给哪些年龄、性别、地区、兴趣、设备上的用户，这些用户特征被允许什么复杂程度上的组合，都需要纳入投放策略的考虑中。</p>
+<p>很显然，策略越复杂，涵盖的可能性越多，在开发和测试上的复杂度就越高。在制定策略和评审开发难度的初期，可能面对来自各方的诘问：“为什么要这么复杂？”、“我认为不会有这方面的需求”……这些时候，作为系统的策划者，要合理听取和评估这些质问和意见。如果是硬性的业务需求，那么不能因为技术难度而让步，反之，还要更进一步地协助开发处理策略逻辑复杂度的问题。一个实用的方法是，对策略进行归一化处理。把能够合并的情况合并在一起，结合思维导图做架构设计，通过不同优先级的有层次的组合，把所有需要的情况囊括进去。这不仅可以降低复杂度，提高系统逻辑的清晰程度，方便测试，也利于之后的系统功能扩展，好处良多。</p>
+<p>但对于一些极其特殊的需求，产品经理不能一味向业务方让步，能够进入系统层面的，通常来讲，都要求功能能够复用，这样才能避免多次反复低效开发。因此，当遇到这种特殊情况，就可以对具体情况做分析，做特殊处理，满足这种 “只用一次” 的情况，例如临时下发一条特殊处理的数据等。</p>
+<hr>
+<h4 id="不可避免的定制化与抗击定制化"><a href="#不可避免的定制化与抗击定制化" class="headerlink" title="不可避免的定制化与抗击定制化"></a>不可避免的定制化与抗击定制化</h4><p>广告不可避免地需要处理非常多定制化的情况。这些要求可能来自用户，从产品的角度考虑不能让用户承受过多的骚扰；可能来自运营，运营希望在一次投放中尽可能地骚扰用户并提高转化；可能来自老板，某个广告被老板看到觉得效果不好，那么也是需要立即改变的。</p>
+<p>这几个情况的存在，意味着广告的展示方式，是多方需求的结合与博弈。这种高度复杂，高度变化、定制化的需求，对系统提出了挑战。对一个已经成型的广告而言，突然加入的特性，且被告知不可复用，往往导致系统面临二难的困境：要在原模块上修改，由于其不可复用，意味着低回报的开发成本，甚至可能对系统的稳定性形成威胁，或影响现有的广告效果；如果另外开发一个模块，同样由于其过分的定制，可能上线之后用过一次，就永不再使用。</p>
+<p>作为系统，对业务尽量不要做出干扰，而应该尽可能地兼顾各方需求。</p>
+<p>因此，需要用系统的稳定性和可扩展性来抗击定制化的需求。系统在必要的时候，应该重构。在一开始的规划中，就尽可能周延地想好已有的情况，及往后维护可能出现的情况。合理设置字段和数据结构，就有可能在面临定制化需求的情况下，仅仅用扩展一个字段的方式，就满足需求。</p>
+<hr>
+<h4 id="基础设施"><a href="#基础设施" class="headerlink" title="基础设施"></a>基础设施</h4><p>包括权限控制、消息推送、数据统计。</p>
+<p>权限控制是每个系统必备的模块。对于广告而言，操作主要包括广告的上架、下架、编辑、删除、取消、送审等。控制这些操作是广告系统权限控制的主要工作。对于常规操作，可以结合 RBAC 做用户动作控制，对于审核操作，需要定义好动作的发生流程与作用对象，如什么操作触发审核、由谁送审、给谁审核、如何通知审核人到位、在什么设备允许如何通过或拒绝、审核过后系统会发生什么样的变动、审核后如何反过来告知送审人等。</p>
+<p>消息推送起着上传下达周知四方的作用，系统发生的任何变动，尤其是类似广告管理这种业务系统，涉及多方，应该把情况周知到位。这些内容至少应该包含：操作、操作时间、操作内容、操作人。信源从系统中由操作人产生，信道依据各个组织的具体情况来进行处理，例如就回环到本系统的消息中心，或者通过办公类IM推送到人/群组，总之，需要保证最后信宿明确收到系统变动通知。及时周知有一万个好处，通知不到位有一万个坏处，余不一一。</p>
+<p>广告系统的数据统计也有深入的学问可以探讨。在这方面，由于经验的缺乏，做的非常不足。对于广告来说，数据是用来评估和改进广告效果的最重要最直接的依据。与广告相关的数据指标可以在这张图中大体了解：</p>
+<img src="/2018/05/12/关于广告系统/1.png" title="图片来自知乎">
+<p>这一批指标，已经直接深入到了运营层面，其中，比较基础的指标包括：</p>
+<p>CPM（Cost Per Mille） ：展现成本，或者叫千人展现成本<br>CPC（Cost Per Click） 点击成本，即每产生一次点击所花费的成本<br>CPA（Cost Per Action）：每行动成本。即按行动收费</p>
+<p>对广告系统而言，如果要支撑精细化运营，这些数据的采集、处理和呈现都是需要做到的。但这同时也意味着，广告系统必须要包含另外一个重要的数据统计模块，这会显著影响系统建设的工期和复杂度。一个简单的处理方法是，在初期的广告系统中，接入这三个基础指标的统计，并在往后的系统规划上，需求大数据项目的支持和协助。在一个部门较为完善的中大型公司，这是比较现实的处理方式。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>「用文字打败时间」</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="Calvino Shaw WeChat Pay">
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.png" alt="Calvino Shaw Alipay">
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品/" rel="tag"># 产品</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/01/2018新年规划/" rel="next" title="2018新年规划">
+                <i class="fa fa-chevron-left"></i> 2018新年规划
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/13/readhub-的可喜变化/" rel="prev" title="readhub 的可喜变化">
+                readhub 的可喜变化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0k/2d/vb_219210.jpg" alt="Calvino Shaw">
+          <p class="site-author-name" itemprop="name">Calvino Shaw</p>
+           
+              <p class="site-description motion-element" itemprop="description">know your self</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/CalvinoShaw/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/calvinoshaw" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://douban.com/people/76292740/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/lossmiss/" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yinwang.org/" title="当然我在扯淡" target="_blank">当然我在扯淡</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://cike.info/" title="Moose的此刻" target="_blank">Moose的此刻</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务决定一切"><span class="nav-number">2.</span> <span class="nav-text">业务决定一切</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#策略是核心"><span class="nav-number">3.</span> <span class="nav-text">策略是核心</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不可避免的定制化与抗击定制化"><span class="nav-number">4.</span> <span class="nav-text">不可避免的定制化与抗击定制化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础设施"><span class="nav-number">5.</span> <span class="nav-text">基础设施</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Calvino Shaw</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

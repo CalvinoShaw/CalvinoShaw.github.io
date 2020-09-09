@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>关于广告系统 | Calvino</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="写在前面做产品这一年来，可以说第一个独立进行了比较深入思考的模块，是广告系统。在没有人带，缺乏指导的情况下，野生地做起一套满足业务需求的广告管理系统，现在再回去看，满满地都是缺点。但是这个过程中，也积累了一些思考，复盘如下：  业务决定一切。 策略是核心。 不可避免的定制化与抗击定制化。 基础设施。   业务决定一切广告系统的定位和目的，决定了这个系统，无论在功能上如何布局，交互上如何处理，策略上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于广告系统">
+<meta property="og:url" content="http://yoursite.com/2018/05/12/%E5%85%B3%E4%BA%8E%E5%B9%BF%E5%91%8A%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="Calvino">
+<meta property="og:description" content="写在前面做产品这一年来，可以说第一个独立进行了比较深入思考的模块，是广告系统。在没有人带，缺乏指导的情况下，野生地做起一套满足业务需求的广告管理系统，现在再回去看，满满地都是缺点。但是这个过程中，也积累了一些思考，复盘如下：  业务决定一切。 策略是核心。 不可避免的定制化与抗击定制化。 基础设施。   业务决定一切广告系统的定位和目的，决定了这个系统，无论在功能上如何布局，交互上如何处理，策略上">
+<meta property="og:locale">
+<meta property="og:image" content="http://yoursite.com/2018/05/12/%E5%85%B3%E4%BA%8E%E5%B9%BF%E5%91%8A%E7%B3%BB%E7%BB%9F/1.png">
+<meta property="article:published_time" content="2018-05-12T10:42:38.000Z">
+<meta property="article:modified_time" content="2020-09-09T02:24:11.270Z">
+<meta property="article:author" content="Calvino Shaw">
+<meta property="article:tag" content="产品">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/12/%E5%85%B3%E4%BA%8E%E5%B9%BF%E5%91%8A%E7%B3%BB%E7%BB%9F/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Calvino" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Calvino</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-关于广告系统" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/12/%E5%85%B3%E4%BA%8E%E5%B9%BF%E5%91%8A%E7%B3%BB%E7%BB%9F/" class="article-date">
+  <time datetime="2018-05-12T10:42:38.000Z" itemprop="datePublished">2018-05-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E4%BA%A7%E5%93%81%E7%AC%94%E8%AE%B0/">产品笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于广告系统
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>做产品这一年来，可以说第一个独立进行了比较深入思考的模块，是广告系统。在没有人带，缺乏指导的情况下，野生地做起一套满足业务需求的广告管理系统，现在再回去看，满满地都是缺点。但是这个过程中，也积累了一些思考，复盘如下：</p>
+<ol>
+<li>业务决定一切。</li>
+<li>策略是核心。</li>
+<li>不可避免的定制化与抗击定制化。</li>
+<li>基础设施。</li>
+</ol>
+<hr>
+<h4 id="业务决定一切"><a href="#业务决定一切" class="headerlink" title="业务决定一切"></a>业务决定一切</h4><p>广告系统的定位和目的，决定了这个系统，无论在功能上如何布局，交互上如何处理，策略上如何考虑，业务——都是必须遵循的最为核心的一点。当广告业务需求出现时，意味着系统中没有的功能可能要进行开发，系统中已有的功能可能要进行剔除或者修改，从而来满足业务方的需求。这与其他所有的互联网产品并无二致，甚至，由于广告系统本身倾向的 toB 性质，这种对业务方的依赖、承诺和服务，相较于 C 端产品来说，更加强烈。</p>
+<hr>
+<h4 id="策略是核心"><a href="#策略是核心" class="headerlink" title="策略是核心"></a>策略是核心</h4><p>广告系统面向的用户并不单一，对系统层面，系统使用者是我们的用户，对用户端，大面积的广告受众也是我们的用户。广告系统的核心体验，要对这两类用户负责。</p>
+<p>在操作流程上，作为一种后台类产品，对于系统使用者而言，广告系统操作的明确性、良好的预期和流程的稳健程度，比起界面呈现效果，是更加核心的用户体验。除了易读的系统使用说明，广告系统最应该具备的，应该是易上手、无歧义的操作风格。因为广告系统的开发团队往往不会是广告主，而广告主才是系统真正的操作人员。这就要求产品经理在系统的设计上，从一开始就应该做好明确的用户调研。在开发广告系统的过程中，这一点自己做的并不够好，导致几个模块上线后，运营方反复询问应该如何使用，甚至会出现误操作的情况。这是广告系统产品经理应该注意和避免的，切忌想当然地进行功能设计，对方的使用习惯，才是更需要考虑的标准。</p>
+<p>在投放策略上，广告系统中的操作，直接决定了广告在受众端的展示效果。一个广告，展示给哪些年龄、性别、地区、兴趣、设备上的用户，这些用户特征被允许什么复杂程度上的组合，都需要纳入投放策略的考虑中。</p>
+<p>很显然，策略越复杂，涵盖的可能性越多，在开发和测试上的复杂度就越高。在制定策略和评审开发难度的初期，可能面对来自各方的诘问：“为什么要这么复杂？”、“我认为不会有这方面的需求”……这些时候，作为系统的策划者，要合理听取和评估这些质问和意见。如果是硬性的业务需求，那么不能因为技术难度而让步，反之，还要更进一步地协助开发处理策略逻辑复杂度的问题。一个实用的方法是，对策略进行归一化处理。把能够合并的情况合并在一起，结合思维导图做架构设计，通过不同优先级的有层次的组合，把所有需要的情况囊括进去。这不仅可以降低复杂度，提高系统逻辑的清晰程度，方便测试，也利于之后的系统功能扩展，好处良多。</p>
+<p>但对于一些极其特殊的需求，产品经理不能一味向业务方让步，能够进入系统层面的，通常来讲，都要求功能能够复用，这样才能避免多次反复低效开发。因此，当遇到这种特殊情况，就可以对具体情况做分析，做特殊处理，满足这种 “只用一次” 的情况，例如临时下发一条特殊处理的数据等。</p>
+<hr>
+<h4 id="不可避免的定制化与抗击定制化"><a href="#不可避免的定制化与抗击定制化" class="headerlink" title="不可避免的定制化与抗击定制化"></a>不可避免的定制化与抗击定制化</h4><p>广告不可避免地需要处理非常多定制化的情况。这些要求可能来自用户，从产品的角度考虑不能让用户承受过多的骚扰；可能来自运营，运营希望在一次投放中尽可能地骚扰用户并提高转化；可能来自老板，某个广告被老板看到觉得效果不好，那么也是需要立即改变的。</p>
+<p>这几个情况的存在，意味着广告的展示方式，是多方需求的结合与博弈。这种高度复杂，高度变化、定制化的需求，对系统提出了挑战。对一个已经成型的广告而言，突然加入的特性，且被告知不可复用，往往导致系统面临二难的困境：要在原模块上修改，由于其不可复用，意味着低回报的开发成本，甚至可能对系统的稳定性形成威胁，或影响现有的广告效果；如果另外开发一个模块，同样由于其过分的定制，可能上线之后用过一次，就永不再使用。</p>
+<p>作为系统，对业务尽量不要做出干扰，而应该尽可能地兼顾各方需求。</p>
+<p>因此，需要用系统的稳定性和可扩展性来抗击定制化的需求。系统在必要的时候，应该重构。在一开始的规划中，就尽可能周延地想好已有的情况，及往后维护可能出现的情况。合理设置字段和数据结构，就有可能在面临定制化需求的情况下，仅仅用扩展一个字段的方式，就满足需求。</p>
+<hr>
+<h4 id="基础设施"><a href="#基础设施" class="headerlink" title="基础设施"></a>基础设施</h4><p>包括权限控制、消息推送、数据统计。</p>
+<p>权限控制是每个系统必备的模块。对于广告而言，操作主要包括广告的上架、下架、编辑、删除、取消、送审等。控制这些操作是广告系统权限控制的主要工作。对于常规操作，可以结合 RBAC 做用户动作控制，对于审核操作，需要定义好动作的发生流程与作用对象，如什么操作触发审核、由谁送审、给谁审核、如何通知审核人到位、在什么设备允许如何通过或拒绝、审核过后系统会发生什么样的变动、审核后如何反过来告知送审人等。</p>
+<p>消息推送起着上传下达周知四方的作用，系统发生的任何变动，尤其是类似广告管理这种业务系统，涉及多方，应该把情况周知到位。这些内容至少应该包含：操作、操作时间、操作内容、操作人。信源从系统中由操作人产生，信道依据各个组织的具体情况来进行处理，例如就回环到本系统的消息中心，或者通过办公类IM推送到人/群组，总之，需要保证最后信宿明确收到系统变动通知。及时周知有一万个好处，通知不到位有一万个坏处，余不一一。</p>
+<p>广告系统的数据统计也有深入的学问可以探讨。在这方面，由于经验的缺乏，做的非常不足。对于广告来说，数据是用来评估和改进广告效果的最重要最直接的依据。与广告相关的数据指标可以在这张图中大体了解：</p>
+<img src="/2018/05/12/%E5%85%B3%E4%BA%8E%E5%B9%BF%E5%91%8A%E7%B3%BB%E7%BB%9F/1.png" class="" title="图片来自知乎">
+
+<p>这一批指标，已经直接深入到了运营层面，其中，比较基础的指标包括：</p>
+<p>CPM（Cost Per Mille） ：展现成本，或者叫千人展现成本<br>CPC（Cost Per Click） 点击成本，即每产生一次点击所花费的成本<br>CPA（Cost Per Action）：每行动成本。即按行动收费</p>
+<p>对广告系统而言，如果要支撑精细化运营，这些数据的采集、处理和呈现都是需要做到的。但这同时也意味着，广告系统必须要包含另外一个重要的数据统计模块，这会显著影响系统建设的工期和复杂度。一个简单的处理方法是，在初期的广告系统中，接入这三个基础指标的统计，并在往后的系统规划上，需求大数据项目的支持和协助。在一个部门较为完善的中大型公司，这是比较现实的处理方式。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/12/%E5%85%B3%E4%BA%8E%E5%B9%BF%E5%91%8A%E7%B3%BB%E7%BB%9F/" data-id="ckeurj6g7000cfgvo1tjhbrz5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%A7%E5%93%81/" rel="tag">产品</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/06/13/readhub-%E7%9A%84%E5%8F%AF%E5%96%9C%E5%8F%98%E5%8C%96/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          readhub 的可喜变化
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/01/2018%E6%96%B0%E5%B9%B4%E8%A7%84%E5%88%92/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2018新年规划</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%80%E7%81%AF%E5%A6%82%E8%B1%86/">一灯如豆</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81%E7%AC%94%E8%AE%B0/">产品笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81%E5%A6%82%E8%AF%97/">代码如诗</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">学习总结</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/B%E7%AB%AF/" rel="tag">B端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%80%E7%81%AF%E5%A6%82%E8%B1%86/" rel="tag">一灯如豆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81/" rel="tag">产品</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81%E7%AC%94%E8%AE%B0/" rel="tag">产品笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/" rel="tag">功能上线</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" rel="tag">年终总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%87%E7%AD%BE/" rel="tag">标签</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" rel="tag">知识图谱</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA/" rel="tag">职场</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%84%E5%88%92/" rel="tag">规划</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/B%E7%AB%AF/" style="font-size: 10px;">B端</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/%E4%B8%80%E7%81%AF%E5%A6%82%E8%B1%86/" style="font-size: 20px;">一灯如豆</a> <a href="/tags/%E4%BA%A7%E5%93%81/" style="font-size: 13.33px;">产品</a> <a href="/tags/%E4%BA%A7%E5%93%81%E7%AC%94%E8%AE%B0/" style="font-size: 16.67px;">产品笔记</a> <a href="/tags/%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/" style="font-size: 10px;">功能上线</a> <a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 10px;">年终总结</a> <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">标签</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" style="font-size: 10px;">知识图谱</a> <a href="/tags/%E8%81%8C%E5%9C%BA/" style="font-size: 10px;">职场</a> <a href="/tags/%E8%A7%84%E5%88%92/" style="font-size: 10px;">规划</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/25/%E4%B8%80%E7%81%AF%E5%A6%82%E8%B1%86-%E7%BB%99%E5%8D%A1%E6%96%AF%E6%89%98%E7%9A%84%E4%BF%A1/">一灯如豆 | 给卡斯托的信</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/12/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E5%AD%A6%E4%B9%A0/">学习总结 - 知识图谱概览</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/11/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93-Salesforce%E4%B8%8E%E4%BC%81%E4%B8%9A%E6%9C%8D%E5%8A%A1%E8%BD%AF%E4%BB%B6/">学习总结 - Salesforce与企业服务软件</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/18/%E4%BA%8C%E9%9B%B6%E4%B8%80%E4%B9%9D%EF%BD%9C%E6%9C%AA%E6%8E%A5%E6%9D%A5%E7%94%B5%20/">二零一九|未接来电</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/03/2019%E5%B9%B4mac%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">2019年 Mac 软件推荐</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Calvino Shaw<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

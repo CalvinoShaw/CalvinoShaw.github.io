@@ -140,7 +140,14 @@ prism_plugin:
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-   type: git
-   repo: https://github.com/CalvinoShaw/CalvinoShaw.github.io.git
-   branch: master
+deploy:  
+  type: upyun 
+  bucket: calvinosblog
+  operator: calvinoshaw
+  password: ORiduXHHjF2mmga20pVLTBDfUVQ6N8uE
+  endpoint: v0.api.upyun.com
+  secret: secret
+  try_times: 5
+  ignore_path_re:
+    dir: null
+    file: ".DS_Store$"

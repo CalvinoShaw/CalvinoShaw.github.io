@@ -1,7 +1,7 @@
 ---
-title: 学习总结 - Salesforce与企业服务软件
+title: Salesforce与企业服务软件
 date: 2020-04-11 19:10:17
-tags: B端
+tags: [B端, 学习总结]
 categories: 学习总结
 ---
 

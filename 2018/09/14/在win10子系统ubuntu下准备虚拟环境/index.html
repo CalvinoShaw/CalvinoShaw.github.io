@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>在win10子系统ubuntu下准备虚拟环境 · 阿炳的博客</title><meta name="description" content="安装 Windows10 子系统  Ubuntu
+环境确认
+首先你的电脑必须是 64bit 的 Win10, OS 版本为 1607 及以上。查看 OS 版本的方法如下：设置 - 系统 - 关于
+
+安装 windows 的 Linux 子系统
+打开 Windows Subsystem for Lin"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 5.1.1"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div id="stage" class="container"><div class="row"><div id="side-bar" class="col-sm-3 col-xs-12 side-container invisible"><div class="vertical-text site-title"><h3 tabindex="-1" class="site-title-small"><a href="/" class="a-title">苍穹煮雨</a></h3><h1 tabindex="-1" class="site-title-large"><a href="/" class="a-title">名字待定</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div id="site-nav" class="site-title-links"><ul><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/categories">分类</a></li><li><a href="/tags">标签</a></li><li><a href="/movies/index.html">电影</a></li><li><a href="/books/index.html">读书</a></li><li><a href="/about/index.html">关于我</a></li><li><a href="/collection/index.html">我的二零二零</a></li><li><a href="/games/index.html">游戏</a></li><li class="soc"><a href="https://github.com/calvinoshaw" target="_blank" rel="noopener noreferrer"><i class="fa fa-github">&nbsp;</i></a><a href="https://twitter.com/calvinoshaw" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter">&nbsp;</i></a><a href="https://www.instagram.com/calvinoshaw" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram">&nbsp;</i></a><a href="https://calvinoshaw.github.io/atom.xml" target="_blank" rel="noopener noreferrer"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2021&nbsp;<a target="_blank" href="https://calvinoshaw.github.io" rel="noopener noreferrer">Calvino Shaw</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div id="main-container" class="col-sm-9 col-xs-12 main-container invisible"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>在win10子系统ubuntu下准备虚拟环境</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2018-09-14</span><span class="meta-item"><i class="fa fa-comment-o"></i><span>&nbsp;</span><a href="/2018/09/14/%E5%9C%A8win10%E5%AD%90%E7%B3%BB%E7%BB%9Fubuntu%E4%B8%8B%E5%87%86%E5%A4%87%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/#comments">评论</a></span><span class="meta-item"><i class="fa fa-folder"></i><span>&nbsp;</span><a href="/categories/代码如诗/" title="代码如诗" class="a-tag">代码如诗</a><span>&nbsp;</span></span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a href="/tags/产品/" title="产品" class="a-tag">产品</a><span>&nbsp;</span></span></p><p class="post-abstract"><h3 id="安装-Windows10-子系统-Ubuntu"><a href="#安装-Windows10-子系统-Ubuntu" class="headerlink" title="安装 Windows10 子系统  Ubuntu"></a>安装 Windows10 子系统  Ubuntu</h3><hr>
+<h5 id="环境确认"><a href="#环境确认" class="headerlink" title="环境确认"></a>环境确认</h5><ul>
+<li>首先你的电脑必须是 64bit 的 Win10, OS 版本为 1607 及以上。查看 OS 版本的方法如下：设置 - 系统 - 关于</li>
+</ul>
+<h5 id="安装-windows-的-Linux-子系统"><a href="#安装-windows-的-Linux-子系统" class="headerlink" title="安装 windows 的 Linux 子系统"></a>安装 windows 的 Linux 子系统</h5><ul>
+<li>打开 Windows Subsystem for Linux 选项后，重启电脑。以系统管理员的身份打开 PowerShell，运行以下代码。命令执行完后，重启电脑.</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="安装-Ubuntu-的-Bash"><a href="#安装-Ubuntu-的-Bash" class="headerlink" title="安装 Ubuntu 的 Bash"></a>安装 Ubuntu 的 Bash</h5><ul>
+<li>打开应用商店，搜索ubuntu,下载安装。</li>
+<li>下载安装完成后，在程序列表中打开Ubuntu。</li>
+<li>第一次运行时，需要设置用户名和密码。</li>
+</ul>
+<h5 id="更新-ubuntu-源"><a href="#更新-ubuntu-源" class="headerlink" title="更新 ubuntu 源"></a>更新 ubuntu 源</h5><ul>
+<li>设置完用户名和密码后，建议先将更新源设为国内的更新源，这样更新起来比较快。<ul>
+<li>首先备份源列表：<code>sudo cp /etc/apt/sources.list /etc/apt/sources.list_b</code></li>
+<li>设置更新源时一定要选对版本。查看 Ubuntu 的版本的命令如下：<code>cat /etc/issue</code></li>
+<li>对应的Ubuntu 16.04的Ubuntu 官方中国（目前是阿里云）的链接如下：<a target="_blank" rel="noopener" href="http://cn.archive.ubuntu.com/ubuntu/">http://cn.archive.ubuntu.com/ubuntu/</a> </li>
+<li>只需要在原有的源列表的链接 <a target="_blank" rel="noopener" href="http://archive.ubuntu.com/ubuntu/">http://archive.ubuntu.com/ubuntu/</a> 中加入(cn.)。</li>
+<li>修改好的源列表如下,去掉了注释部分：</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-SHELL"><code class="language-SHELL">deb http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main restricted
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial universe
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-updates universe
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-updates multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu/ xenial-security main restricted
+deb http://security.ubuntu.com/ubuntu/ xenial-security universe
+deb http://security.ubuntu.com/ubuntu/ xenial-security multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="更新软件包列表"><a href="#更新软件包列表" class="headerlink" title="更新软件包列表"></a>更新软件包列表</h5><ul>
+<li>修改完成后，关闭编辑器，更新软件包列表，执行下面的命令：</li>
+</ul>
+<pre class="line-numbers language-SHELL"><code class="language-SHELL">sudo apt update
+sudo apt-get update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li>接着更新系统，执行下面的命令：</li>
+</ul>
+<pre class="line-numbers language-SH"><code class="language-SH">sudo apt upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>系统更新完成后，Win10中的Ubuntu的Bash就算安装完成了．</li>
+</ul>
+<h3 id="安装-Python-及应用"><a href="#安装-Python-及应用" class="headerlink" title="安装 Python 及应用"></a>安装 Python 及应用</h3><hr>
+<h5 id="安装-python3-5"><a href="#安装-python3-5" class="headerlink" title="安装 python3.5"></a>安装 python3.5</h5><ul>
+<li>命令如下：</li>
+</ul>
+<pre class="line-numbers language-SHell"><code class="language-SHell">sudo apt install python3
+# Python3的版本是：Python 3.5.2．<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h5 id="在-python3-下安装-python-pip．"><a href="#在-python3-下安装-python-pip．" class="headerlink" title="在 python3 下安装 python-pip．"></a>在 python3 下安装 python-pip．</h5><ul>
+<li>命令如下：</li>
+</ul>
+<pre class="line-numbers language-SH"><code class="language-SH">sudo apt install python3-pip
+# pip3的版本为：pip 8.1.1 from /usr/lib/python3/dist-packages (python 3.5)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h5 id="升级pip3"><a href="#升级pip3" class="headerlink" title="升级pip3"></a>升级pip3</h5><ul>
+<li>pip3 的升级命令如下：</li>
+</ul>
+<pre class="line-numbers language-SH"><code class="language-SH">sudo pip3 install --upgrade pip
+# 升级后pip3的版本为：pip 9.0.1 from /home/green/.local/lib/python3.5/site-packages (python 3.5)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h5 id="使用-pip-安装-python-包"><a href="#使用-pip-安装-python-包" class="headerlink" title="使用 pip 安装 python 包"></a>使用 pip 安装 python 包</h5><ul>
+<li>命令如下：</li>
+</ul>
+<pre class="line-numbers language-SHell"><code class="language-SHell"># <packagename> 为 python 包名，如 numpy
+sudo pip3 install <packagename><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h5 id="安装常用软件包和开发工具"><a href="#安装常用软件包和开发工具" class="headerlink" title="安装常用软件包和开发工具"></a>安装常用软件包和开发工具</h5><ul>
+<li>还需要安装一些更多的软件包和开发工具，以确保编程环境具有强大的基础库配置：<pre class="line-numbers language-shell"><code class="language-shell">sudo apt-get install build-essential
+sudo apt-get install libssl-dev
+sudo apt-get install libffi-dev
+sudo apt-get install python-dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="设置虚拟环境-virtualenv"><a href="#设置虚拟环境-virtualenv" class="headerlink" title="设置虚拟环境(virtualenv)"></a>设置虚拟环境(virtualenv)</h3><ul>
+<li>一旦完成设置 Python，并且安装了 pip 和其他工具，用户便可以为开发项目设置一个虚拟环境。</li>
+<li>通过虚拟环境（virtualenv），用户可以在计算机上为 Python 项目创建一个独立的空间，以确保每个项目都有自己的一组依赖关系，并且这些关系不会中断任何其他项目。</li>
+<li>设置编程环境使用户能够更好地控制 Python 项目，以及处理不同版本的包。 这在使用第三方软件包时尤其重要。</li>
+<li>根据需要以设置尽可能多的 Python 编程环境。 每个环境基本上是计算机中的一个目录或文件夹，其几个脚本使其作为一个环境。</li>
+</ul>
+<h5 id="安装-venv-模块"><a href="#安装-venv-模块" class="headerlink" title="安装 venv 模块"></a>安装 venv 模块</h5><ul>
+<li>首先安装 <code>venv</code> 模块以便调用 <code>pyvenv</code> 命令，<code>venv</code> 模块是标准 Python3 库的一部分，这将创建虚拟环境。键入以下命令安装venv：<pre class="line-numbers language-sh"><code class="language-sh">sudo apt-get install -y python3-venv`<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h5 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h5><ul>
+<li><p>安装完成后，便准备创建环境。 首先选择 Python 编程环境放置的目录，或者使用 <code>mkdir</code> 创建一个新目录，如：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">mkdir environments
+cd environments<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>在环境所在的目录中，运行以下命令来创建环境：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">pyvenv my_env<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>基本上，pyvenv设置了包含几个项目的新目录，使用ls命令查看：</p>
+<pre class="line-numbers language-SHELL"><code class="language-SHELL">ls my_env
+
+# Output
+# bin include lib lib64 pyvenv.cfg share<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>这些文件共同工作，确保项目与本地机器的上下文隔离，以便系统文件和项目文件不会混合。 这是版本控制的最佳做法，也可确保每个项目都能访问所需的特定软件包。 Python Wheels 是一种 Python 的内置格式，它在 Ubuntu 16.04 共享目录中，通过减少编译所需的次数来加快软件生成。</p>
+</li>
+</ul>
+<h5 id="激活虚拟环境"><a href="#激活虚拟环境" class="headerlink" title="激活虚拟环境"></a>激活虚拟环境</h5><ul>
+<li><p>若需要激活以使用此环境，键入以下激活脚本命令来执行：</p>
+<pre class="line-numbers language-SHELL"><code class="language-SHELL">source my_env/bin/activate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>提示将以环境的名称为前缀，在这种情况下，它被称为my_env。前缀可能看起来有些不同，但是用户应在第一行看到圆括号中的环境名称：</p>
+<pre class="line-numbers language-SHELL"><code class="language-SHELL">(my_env) sammy@sammy:~/environments$<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>此前缀表示环境<code>my_env</code>当前处于激活状态，这意味着在创建程序时，它们将只使用此特定环境的设置和包。</p>
+</li>
+<li><p>注意：在虚拟环境中，用户可以使用命令 python 而不是 python3，如果愿意，也可以使用 pip 而不是 pip3。如果用户在一个环境之外的机器上使用 Python3，则需要专门使用 python3 和 pip3 命令。</p>
+</li>
+<li><p>完成这些步骤后，便可使用虚拟环境。</p>
+</li>
+</ul>
+<h5 id="创建简单的程序"><a href="#创建简单的程序" class="headerlink" title="创建简单的程序"></a>创建简单的程序</h5><ul>
+<li><p>完成设置虚拟环境后，创建一个简单的“Hello，World！”程序。 这将确保环境工作，并使用户有机会更加熟悉Python。</p>
+</li>
+<li><p>完成此过程需要打开一个命令行文本编辑器，如 nano，并创建一个新文件：</p>
+<pre class="line-numbers language-SHELL"><code class="language-SHELL">(my_env) sammy@sammy:~/environments$ nano hello.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>一旦文本文件在终端窗口中打开，输入程序：</p>
+<pre class="line-numbers language-SHELL"><code class="language-SHELL">print ("Hello，World！")<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>键入 control 键和 x 键退出 nano，并且在提示保存文件时按y。<br>一旦退出nano并返回shell，运行程序：</p>
+<pre class="line-numbers language-SHELL"><code class="language-SHELL">(my_env) sammy@sammy:~/environments$ python hello.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>刚刚创建的hello.py程序将使终端产生以下输出：</p>
+<pre class="line-numbers language-SHELL"><code class="language-SHELL">Output
+Hello, World!<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h5 id="退出虚拟环境"><a href="#退出虚拟环境" class="headerlink" title="退出虚拟环境"></a>退出虚拟环境</h5><ul>
+<li><p>要退出环境，只需键入命令 <code>deactivate</code> 返回到原始目录。</p>
+</li>
+<li><p>恭喜！ 此时，用户已在本地 Ubuntu 机器上设置了一个 Python3 编程环境，并可以开始编码项目！</p>
+</li>
+</ul>
+<h3 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">https://msdn.microsoft.com/en-us/commandline/wsl/install_guide</a></li>
+</ul>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></span><span class="soc"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></span><span class="soc"><a target="_blank" rel="noopener" href="http://twitter.com/home?status=https://calvinoshaw.github.io/2018/09/14/在win10子系统ubuntu下准备虚拟环境/%20阿炳的博客%20在win10子系统ubuntu下准备虚拟环境" class="fa fa-twitter"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/2018/11/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%84%E6%B5%8B%E6%8C%87%E6%A0%87/" title="机器学习评测指标"><i class="fa fa-angle-double-left"></i>&nbsp;上一篇: 机器学习评测指标</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2018/06/19/%E7%BF%BB%E8%AF%91-%E6%96%B0%E7%94%A8%E6%88%B7%E9%A6%96%E6%AC%A1%E4%BD%BF%E7%94%A8%E6%83%85%E6%99%AF%E4%B8%8B%E7%9A%845%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" title="翻译 - 新用户首次使用情景下的5大设计原则">下一篇: 翻译 - 新用户首次使用情景下的5大设计原则&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'calvinoshaw-1';
+var disqus_identifier = '2018/09/14/在win10子系统ubuntu下准备虚拟环境/';
+var disqus_title = '在win10子系统ubuntu下准备虚拟环境';
+var disqus_url = 'https://calvinoshaw.github.io/2018/09/14/在win10子系统ubuntu下准备虚拟环境/';
+(function () {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//calvinoshaw-1.disqus.com/count.js" async></script></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2021&nbsp;<a target="_blank" href="https://calvinoshaw.github.io" rel="noopener noreferrer">Calvino Shaw</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>

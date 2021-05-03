@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>关于处理 iOS 应用内评价 · 阿炳的博客</title><meta name="description" content="评价时机
+在特定时机下，首次出现应用内评价弹窗
+SKStoreReviewController 一年只能使用3次，需要确认这 3 次是不是需要精确写定弹出的时机
+防止键盘遮挡问题
+旧 iOS 版本兼容问题（iOS 10.3 以下）
+目的是能得到用户的正反馈，尽量保证只在忠实用户前，且在合适的时机上才"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 5.1.1"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div id="stage" class="container"><div class="row"><div id="side-bar" class="col-sm-3 col-xs-12 side-container invisible"><div class="vertical-text site-title"><h3 tabindex="-1" class="site-title-small"><a href="/" class="a-title">苍穹煮雨</a></h3><h1 tabindex="-1" class="site-title-large"><a href="/" class="a-title">名字待定</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div id="site-nav" class="site-title-links"><ul><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/categories">分类</a></li><li><a href="/tags">标签</a></li><li><a href="/movies/index.html">电影</a></li><li><a href="/books/index.html">读书</a></li><li><a href="/about/index.html">关于我</a></li><li><a href="/collection/index.html">我的二零二零</a></li><li><a href="/games/index.html">游戏</a></li><li class="soc"><a href="https://github.com/calvinoshaw" target="_blank" rel="noopener noreferrer"><i class="fa fa-github">&nbsp;</i></a><a href="https://twitter.com/calvinoshaw" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter">&nbsp;</i></a><a href="https://www.instagram.com/calvinoshaw" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram">&nbsp;</i></a><a href="https://calvinoshaw.github.io/atom.xml" target="_blank" rel="noopener noreferrer"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2021&nbsp;<a target="_blank" href="https://calvinoshaw.github.io" rel="noopener noreferrer">Calvino Shaw</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div id="main-container" class="col-sm-9 col-xs-12 main-container invisible"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>关于处理 iOS 应用内评价</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2018-03-13</span><span class="meta-item"><i class="fa fa-comment-o"></i><span>&nbsp;</span><a href="/2018/03/13/%E5%85%B3%E4%BA%8E%E5%A4%84%E7%90%86iOS%E5%BA%94%E7%94%A8%E5%86%85%E8%AF%84%E4%BB%B7/#comments">评论</a></span><span class="meta-item"><i class="fa fa-folder"></i><span>&nbsp;</span><a href="/categories/产品笔记/" title="产品笔记" class="a-tag">产品笔记</a><span>&nbsp;</span></span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a href="/tags/iOS/" title="iOS" class="a-tag">iOS</a><span>&nbsp;</span></span></p><p class="post-abstract"><h3 id="评价时机"><a href="#评价时机" class="headerlink" title="评价时机"></a>评价时机</h3><ul>
+<li>在特定时机下，首次出现应用内评价弹窗</li>
+<li>SKStoreReviewController 一年只能使用3次，需要确认这 3 次是不是需要精确写定弹出的时机</li>
+<li>防止键盘遮挡问题</li>
+<li>旧 iOS 版本兼容问题（iOS 10.3 以下）</li>
+<li>目的是能得到用户的正反馈，尽量保证只在忠实用户前，且在合适的时机上才弹出真正的评分框</li>
+</ul>
+<h3 id="评价时机-1"><a href="#评价时机-1" class="headerlink" title="评价时机"></a>评价时机</h3><ul>
+<li>只有在用户与您的应用程序进行了演示后，才要求提供评分。例如，在完成游戏级别或生产力任务时提示用户。</li>
+<li>永远不要要求首次发布或入职期间的评级。留出足够的时间来形成意见。</li>
+<li>不要打断用户，尤其是当他们正在执行时间敏感或压力很大的任务时。查找逻辑暂停或停止点，评级请求最有意义。</li>
+<li>不要成为害虫。重复的评级提示可能会让人恼火，甚至可能会对用户对您的应用程序的看法产生负面影响。在评分请求之间至少允许使用一两个星期，并且只有在用户演示了与您的应用的额外参与之后再次提示。</li>
+</ul>
+<h3 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h3><ul>
+<li>iOS10.3 之后，苹果引入一种新的应用内评分评论机制， 用户将可在应用内直接对应用进行评分。</li>
+<li>评分/评论请求视图的实际显示是由 App Store 策略管理的。 由于此方法可能会或可能不会显示警报，因此响应按钮点击或其他用户操作来调用它是不合适的。</li>
+</ul>
+<h3 id="现有评价机制"><a href="#现有评价机制" class="headerlink" title="现有评价机制"></a>现有评价机制</h3><ul>
+<li>iOS应用内部实现 App Store 评分功能，笔着整理总结有三种方式，各位可根据自己需求自己选择。先介绍下评分功能实现的三种方式。<ul>
+<li>通用方式通过 App 内部打开网页形式，跳转到 AppStore 编辑评论，可评分，可评论。<ul>
+<li>优点：方便，快捷，不受系统版本限制，目前最常用的方式。</li>
+<li>缺点：内部网页形式加载缓慢，等待时间长，加载失败概率大。</li>
+</ul>
+</li>
+<li>iOS 6.0 以后 在 app 内部加载 AppStore 展示 app 信息<ul>
+<li>优点：展示速度比方法三块快</li>
+<li>缺点：不能直接跳转到评论编辑页面，需要手动点击评论+编辑评论</li>
+</ul>
+</li>
+<li>iOS 10.0.3 新增应用内评分功能，调用系统方法评分。<ul>
+<li>优点：无须跳转，应用内系统弹框，方便快速。</li>
+<li>缺点：只能评分，且一年只能使用三次弹框。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3>
+
+<h3 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://www.cocoachina.com/cms/wap.php?action=article&amp;id=21075">http://www.cocoachina.com/cms/wap.php?action=article&amp;id=21075</a></li>
+<li><a target="_blank" rel="noopener" href="https://sspai.com/post/38673">https://sspai.com/post/38673</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c30c1aec7b8a">https://www.jianshu.com/p/c30c1aec7b8a</a></li>
+</ul>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></span><span class="soc"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></span><span class="soc"><a target="_blank" rel="noopener" href="http://twitter.com/home?status=https://calvinoshaw.github.io/2018/03/13/关于处理iOS应用内评价/%20阿炳的博客%20关于处理 iOS 应用内评价" class="fa fa-twitter"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/2018/03/23/%E5%85%B3%E4%BA%8E%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF%E7%9A%84%E5%8F%8D%E6%80%9D/" title="关于功能上线的反思"><i class="fa fa-angle-double-left"></i>&nbsp;上一篇: 关于功能上线的反思</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2018/03/12/%E5%85%B3%E4%BA%8E%E6%A0%87%E7%AD%BE%E7%9A%84%E6%80%9D%E8%80%83/" title="关于标签的思考">下一篇: 关于标签的思考&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'calvinoshaw-1';
+var disqus_identifier = '2018/03/13/关于处理iOS应用内评价/';
+var disqus_title = '关于处理 iOS 应用内评价';
+var disqus_url = 'https://calvinoshaw.github.io/2018/03/13/关于处理iOS应用内评价/';
+(function () {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//calvinoshaw-1.disqus.com/count.js" async></script></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2021&nbsp;<a target="_blank" href="https://calvinoshaw.github.io" rel="noopener noreferrer">Calvino Shaw</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>
